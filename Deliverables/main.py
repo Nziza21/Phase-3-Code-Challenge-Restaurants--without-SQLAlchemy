@@ -1,11 +1,11 @@
-from customer import Customer
-from restaurant import Restaurant
-from review import Review
+from Deliverables.customer import Customer
+from Deliverables.restaurant import Restaurant
+from Deliverables.review import Review
 
 
-from customer import Customer
-from restaurant import Restaurant
-from review import Review
+from Deliverables.customer import Customer
+from Deliverables.restaurant import Restaurant
+from Deliverables.review import Review
 
 # Sample instances for testing
 customer1 = Customer("George", "Washington")

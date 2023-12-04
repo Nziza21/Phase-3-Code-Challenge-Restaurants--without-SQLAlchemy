@@ -1,4 +1,4 @@
-from review import Review
+from Deliverables.review import Review
 
 class Customer:
     all_customers = []
