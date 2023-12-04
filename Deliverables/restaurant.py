@@ -1,23 +1,28 @@
-from Deliverables.review import Review
-
 class Restaurant:
     all_restaurants = []
 
     def __init__(self, name):
-        self._name = name
+        self.name = name
+        self.reviews = []
         Restaurant.all_restaurants.append(self)
 
     def name(self):
-        return self._name
+        return self.name
 
     def reviews(self):
-        return [review for review in Review.all_reviews() if review.restaurant() == self]
+        return self.reviews
 
     def customers(self):
-        return list(set(review.customer() for review in self.reviews()))
+        return list({review.customer for review in self.reviews})
 
+    @classmethod
+    def all(cls):
+        return cls.all_restaurants
+    
     def average_star_rating(self):
-        ratings = [review.rating() for review in self.reviews()]
-        if not ratings:
-            return 0
-        return sum(ratings) / len(ratings)
+        total_ratings = sum(review.rating for review in self.reviews)
+        num_reviews = len(self.reviews)
+        if num_reviews > 0:
+            return total_ratings / num_reviews
+        else:
+            return 0  # Return 0 if there are no reviews yet
