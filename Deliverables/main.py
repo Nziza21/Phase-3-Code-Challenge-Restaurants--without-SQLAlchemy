@@ -1,9 +1,6 @@
 from Deliverables.customer import Customer
 from Deliverables.restaurant import Restaurant
 
-from Deliverables.customer import Customer
-from Deliverables.restaurant import Restaurant
-
 # Sample instances for testing
 customer1 = Customer("George", "Washington")
 customer2 = Customer("John", "Adams")
