@@ -1,22 +1,21 @@
-from Deliverables.review import Review
 from Deliverables.customer import Customer
 from Deliverables.restaurant import Restaurant
 
-def main():
-    # Instantiate some customers, restaurants, and reviews
-    customer1 = Customer("John", "Doe")
-    customer2 = Customer("Alice", "Smith")
+from Deliverables.customer import Customer
+from Deliverables.restaurant import Restaurant
 
-    restaurant1 = Restaurant("Tasty Treats")
-    restaurant2 = Restaurant("Burger Palace")
+# Sample instances for testing
+customer1 = Customer("George", "Washington")
+customer2 = Customer("John", "Adams")
+restaurant1 = Restaurant("The Best Restaurant")
+restaurant2 = Restaurant("Delicious Eats")
 
-    review1 = Review(customer1, restaurant1, 4)
-    review2 = Review(customer2, restaurant2, 5)
+# Testing methods
+review1 = customer1.add_review(restaurant1, 4)
+review2 = customer2.add_review(restaurant1, 5)
+review3 = customer1.add_review(restaurant2, 3)
 
-    # Example usage of the methods
-    print(customer1.full_name())  # Output: John Doe
-    print(restaurant2.average_star_rating())  # Output: 5.0
-    print(customer2.num_reviews())  # Output: 1
-
-if __name__ == '__main__':
-    main()
+print(customer1.full_name())  # Output: George Washington
+print(customer1.restaurants())  # Output: [The Best Restaurant, Delicious Eats]
+print(restaurant1.customers())  # Output: [George Washington, John Adams]
+print(restaurant1.average_star_rating())  # Output: 4.5
