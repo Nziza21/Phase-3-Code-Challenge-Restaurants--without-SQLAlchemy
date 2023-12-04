@@ -71,3 +71,7 @@ The project is organized into separate files for each class and a main file for 
 2. Run the `main.py` file to test the classes and methods.
 
 Feel free to customize this README to provide additional details or instructions specific to your project.
+
+## License
+
+This project is licensed under the Unlicense - see the [LICENSE](LICENSE) file for details.
